@@ -9,7 +9,28 @@
         </h1>
 
         <script>
-            
+            //Basic level
+            // function titleCase(sentence) {
+            //     sentence = sentence.toLowerCase().split(' ');
+            //
+            //     for (var i = 0; i < sentence.length; i++) {
+            //         sentence[i] = sentence[i].split('');
+            //         sentence[i][0] = sentence[i][0].toUpperCase();
+            //         sentence[i] = sentence[i].join('');
+            //     }
+            //     return sentence.join(' ');
+            // }
+
+            //Intermediate level
+            function titleCase(sentence) {
+                sentence = sentence.toLowerCase().split(' ');
+
+                var result = sentence.map(function(val){
+                    return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+                });
+
+                return result.join(' ');
+            }
         </script>
     </body>
 </html>
